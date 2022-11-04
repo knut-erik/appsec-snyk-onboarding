@@ -1,0 +1,17 @@
+tasks:
+  - name: Init Presentation
+    command: python -m http.server 8080 --directory "$GITPOD_REPO_ROOT"/
+
+ports:
+  - port: 8080
+    onOpen: ignore
+    visibility: private
+    name: presentation
+
+vscode:
+  extensions:
+    - wayou.vscode-todo-highlight
+    - manuth.eslint-language-service
+    - dbaeumer.vscode-eslint
+    - DavidAnson.vscode-markdownlint
+    - EditorConfig.EditorConfig
